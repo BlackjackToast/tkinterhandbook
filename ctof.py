@@ -14,6 +14,7 @@ items = ("Fahrenheit", "Celsius")
 temp_string = tk.StringVar(value = items[0])
 combo = ttk.Combobox(window, textvariable=temp_string)
 
+#convert F to C or C to F
 def convert():
     user_input = entry_Int.get()
     current_unit = temp_string.get()
@@ -40,6 +41,7 @@ title_label.pack()
 input_frame = ttk.Frame(window)
 entry_Int = tk.IntVar()
 entry = ttk.Entry(input_frame, textvariable = entry_Int)
+#button styling at end
 button = ttk.Button(input_frame, text = "Convert", command = convert, bootstyle="success-outline-round")
 entry.pack(side = "left", padx = 10)
 button.pack(side = "right")
